@@ -26,6 +26,6 @@ jobs:
     
     - name: Build, Tag and Push the Docker image
       run:  |
-        docker build . oayanda/continuous_php_image
+        docker build . -t oayanda/continuous_php_image
         docker tag oayanda/continuous_php_image:latest public.ecr.aws/k3g7e9f8/oayanda/continuous_php_image:latest
         docker push public.ecr.aws/k3g7e9f8/oayanda/continuous_php_image:latest
